@@ -1,0 +1,40 @@
+@media screen and (min-width: 760px) {
+	#breadcrumb {
+		width: calc(50% - 80px);
+	}
+
+	.inside #map-container {
+		position: fixed;
+  		right: 0;
+  		height: 87%;
+  		top: 80px;
+  		width: 50%;
+	}
+
+	#restaurant-container, #reviews-container {
+		padding: 140px 40px 30px;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 759px) {
+	#breadcrumb {
+		width: 100%;
+	}
+
+	.inside #map-container {
+		height: 20%;
+		top: 120px;
+		width: 100%;
+	}
+
+	#restaurant-container {
+		padding: 300px 5% 0px 5%;
+		width: 100%;
+	}
+
+	#reviews-container {
+		padding: 10%;
+		width: 100%;
+	}
+};
