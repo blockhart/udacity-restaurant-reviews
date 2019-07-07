@@ -65,6 +65,18 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #BF1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus{
+  top: 0;
+}
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -137,8 +149,8 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -153,7 +165,7 @@ nav h1 a {
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
-  margin: 0;
+  margin: 20px 0;
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
@@ -161,7 +173,7 @@ nav h1 a {
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 14pt;
+  font-size: 2rem;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.3;
@@ -170,7 +182,7 @@ nav h1 a {
 }
 #restaurants-list p {
   margin: 0;
-  font-size: 11pt;
+  font-size: 1rem;
 }
 #restaurants-list li a {
   background-color: orange;

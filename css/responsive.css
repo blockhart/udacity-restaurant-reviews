@@ -23,6 +23,8 @@
 	}
 
 	.inside #map-container {
+		position: fixed;
+  		right: 0;
 		height: 20%;
 		top: 120px;
 		width: 100%;
