@@ -27,7 +27,7 @@ var staticCacheName = 'restaurant-files-v1'
  */
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('restaurant-files-v3').then(function(cache) {
+    caches.open(staticCacheName).then(function(cache) {
       return cache.addAll(cacheFiles);
     })
   );

@@ -27,4 +27,4 @@
 
 1. Added serviceworker (sw.js), called for at end of main.js
 2. Included capability to erase old, related caches
-3. Included capability to fetch 
+3. Included capability to fetch if/when not in cache
