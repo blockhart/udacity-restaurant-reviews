@@ -1,3 +1,5 @@
+console.log('Hello from inside the sw.js file');
+
 const cacheFiles = [
   '/',
   '/index.html',
@@ -59,22 +61,7 @@ self.addEventListener('activate', function(event) {
  self.addEventListener('fetch', function(event) {
  	event.respondWith(
  		caches.match(event.request).then(function(response) {
- 			if (response) {
- 				console.log('Found ' + event.request + ' in cache');
- 				return response;
- 			} else {
- 				console.log('Could not find ' + event.request + ' in cache, so will fetch over network'); 				
- 				return fetch(event.request)
- 				.then(function(response) {
- 					caches.open('staticCacheName').then(function(cache){
- 	 					cache.put(event.request, response);					
- 					})
-					return response;
- 				})
- 				.catch(function(error) {
- 					console.log(error);
- 				})
- 			}	
+ 			return response || fetch(event.request);
  		})
  	);
  });
